@@ -5,11 +5,11 @@ TRUNCATE
   markdown_users
   RESTART IDENTITY CASCADE;
 
-INSERT INTO markdown_users (email, full_name, password, image)
+INSERT INTO markdown_users (email, user_name, full_name, password, image)
 VALUES
-  ('nathaniel@thepixelparty.com', 'Nathaniel Mata', 'password', 'https://lh3.googleusercontent.com/a-/AOh14Ghn52dpIIUTcfUzE9kPxBShzmeVCvRF4U9rxia6WA=s192-c-rg-br100'),
-  ('nathaniel@ahdios.com', 'Nathaniel Rose', 'password', 'https://lh6.googleusercontent.com/-lLV5q-n48hk/AAAAAAAAAAI/AAAAAAAAAAA/AMZuucnEr0D1IPDLCZ053OIDl8pMn06HWQ/s96-c-rg-br100/photo.jpg'),
-  ('nate@nathanielmata.com', 'Nathaniel Homer', 'password', 'https://lh3.googleusercontent.com/-0-rJumwbvI0/AAAAAAAAAAI/AAAAAAAAAAA/AMZuuclXec2Yw5EGMjn0L33miUfQFB0iSA/s96-c-rg-br100/photo.jpg');
+  ('nathaniel@thepixelparty.com', 'nathanielmata', 'Nathaniel Mata', 'password', 'https://lh3.googleusercontent.com/a-/AOh14Ghn52dpIIUTcfUzE9kPxBShzmeVCvRF4U9rxia6WA=s192-c-rg-br100'),
+  ('nathaniel@ahdios.com', 'nathanielrose', 'Nathaniel Rose', 'password', 'https://lh6.googleusercontent.com/-lLV5q-n48hk/AAAAAAAAAAI/AAAAAAAAAAA/AMZuucnEr0D1IPDLCZ053OIDl8pMn06HWQ/s96-c-rg-br100/photo.jpg'),
+  ('nate@nathanielmata.com', 'homer', 'Nathaniel Homer', 'password', 'https://lh3.googleusercontent.com/-0-rJumwbvI0/AAAAAAAAAAI/AAAAAAAAAAA/AMZuuclXec2Yw5EGMjn0L33miUfQFB0iSA/s96-c-rg-br100/photo.jpg');
 
 INSERT INTO markdown_notes (user_id, title, content)
 VALUES
