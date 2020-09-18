@@ -1,0 +1,40 @@
+{
+  "name": "markdown-notes-capstone-server",
+  "version": "1.0.0",
+  "description": "api server for the markdown notes client",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon src/server",
+    "start": "node src/server",
+    "migrate": "postgrator --config postgrator-config.js",
+    "migrate:test": "env NODE_ENV=test npm run migrate",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nathanielmata/markdown-notes-capstone-server.git"
+  },
+  "author": "Nathaniel Mata",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nathanielmata/markdown-notes-capstone-server/issues"
+  },
+  "homepage": "https://github.com/nathanielmata/markdown-notes-capstone-server#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "helmet": "^4.1.1",
+    "knex": "^0.21.5",
+    "morgan": "^1.10.0",
+    "pg": "^8.3.3",
+    "xss": "^1.0.8"
+  },
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "mocha": "^8.1.3",
+    "nodemon": "^2.0.4",
+    "postgrator-cli": "^3.2.0",
+    "supertest": "^4.0.2"
+  }
+}
