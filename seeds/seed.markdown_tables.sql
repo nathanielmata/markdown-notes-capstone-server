@@ -13,16 +13,16 @@ VALUES
 
 INSERT INTO markdown_notes (user_id, title, content)
 VALUES
-  (1,'SVGs in JSX', '# SVGs in JSX \n - [SVGtoJSX Electron App](https://github.com/SaraVieira/svg-to-jsx-electron/) \n ```- [SVG Basic Shapes](https://developer.mozilla.org/en-US/docs/Web/SVG/Tutorial/Basic_Shapes)```'),
-  (1,'Static site generation with Hugo', 'fd'),
-  (1,'Useful javascript array methods', 'fd'),
-  (1,'HTTP status codes cheatesheet', 'fd'),
-  (1,'Custom HTML Elements with Web Component', 'fd'),
-  (1,'Intro to Web Assembly', 'fd'),
-  (1,'Understanding Go Interfaces', 'fd'),
-  (1,'HTTP services in Golang', 'fd'),
-  (1,'Markdown Cheatsheet', '# Markdown Cheatsheet \n - [Github Markdown Syntax](https://guides.github.com/pdfs/markdown-cheatsheet-online.pdf)'),
-  (1,'CSS Animations', '# CSS Animations \n - Use @keyframes to control the intermediate steps in a CSS animation sequence \n - [MDN @keyframes ref](https://developer.mozilla.org/en-US/docs/Web/CSS/@keyframes)'),
-  (1,'Unordered Lists', '* something \n* another thing \n* last thing \n* one more \n*not in the list\n***not in the list *hello* hi***');
+  (1,'SVGs in JSX', E'# SVGs in JSX \n - [SVGtoJSX Electron App](https://github.com/SaraVieira/svg-to-jsx-electron/) \n ```- [SVG Basic Shapes](https://developer.mozilla.org/en-US/docs/Web/SVG/Tutorial/Basic_Shapes)```'),
+  (1,'Static site generation with Hugo', E'fd'),
+  (1,'Useful javascript array methods', E'fd'),
+  (1,'HTTP status codes cheatesheet', E'fd'),
+  (1,'Custom HTML Elements with Web Component', E'fd'),
+  (1,'Intro to Web Assembly', E'fd'),
+  (1,'Understanding Go Interfaces', E'fd'),
+  (1,'HTTP services in Golang', E'fd'),
+  (1,'Markdown Cheatsheet', E'# Markdown Cheatsheet \n - [Github Markdown Syntax](https://guides.github.com/pdfs/markdown-cheatsheet-online.pdf)'),
+  (1,'CSS Animations', E'# CSS Animations \n\n- Use @keyframes to control the intermediate steps in a CSS animation sequence \n\n- [MDN @keyframes ref](https://developer.mozilla.org/en-US/docs/Web/CSS/@keyframes)'),
+  (1,'Unordered Lists', E'* something \n* another thing \n* last thing \n* one more \n*not in the list\n***not in the list *hello* hi***');
 
 COMMIT;
