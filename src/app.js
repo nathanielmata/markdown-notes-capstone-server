@@ -6,7 +6,7 @@ const helmet = require("helmet");
 // const corsOptionsDelegate = require("./corsOptionsDelegate");
 const { error404, errorHandler } = require("./error");
 const { NODE_ENV } = require("./config");
-// const notesRouter = require("./notes/notes-router");
+const notesRouter = require("./endpoints/notes/notes-router");
 const app = express();
 
 app.use(
@@ -17,7 +17,9 @@ app.use(
 app.use(cors());
 app.use(helmet());
 
+app.use("/api/notes", notesRouter);
 // app.use("/notes", cors(corsOptionsDelegate), notesRouter);
+// app.use("/profile", cors(corsOptionsDelegate), profileRouter);
 
 // app.get("/", cors(corsOptionsDelegate), (req, res) => {
 //   res.send("Hello, world!");
