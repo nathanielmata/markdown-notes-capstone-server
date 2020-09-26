@@ -18,6 +18,15 @@ const NotesService = {
       .then((note) => NotesService.getById(db, note.id));
   },
 
+  updateNote(db, id, newNoteFields) {
+    return db("markdown_notes")
+      .where({ id })
+      .update(newNoteFields)
+      .returning("*")
+      .then(([note]) => note)
+      .then((note) => NotesService.getById(db, note.id));
+  },
+
   serializeNotes(notes) {
     return notes.map((note) => {
       return {
