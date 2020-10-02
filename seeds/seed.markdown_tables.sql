@@ -19,7 +19,7 @@ VALUES
 
 INSERT INTO markdown_notes (uid, user_id, title, content, created_at)
 VALUES
-  ('6d3c16f16ff3400da7d2998c7bc518c0', 1,'SVGs in JSX', E'# SVGs in JSX \n - [SVGtoJSX Electron App](https://github.com/SaraVieira/svg-to-jsx-electron/) \n ```- [SVG Basic Shapes](https://developer.mozilla.org/en-US/docs/Web/SVG/Tutorial/Basic_Shapes)```', '2020-01-13T16:28:32.615Z'),
+  ('6d3c16f16ff3400da7d2998c7bc518c0', 1,'SVGs in JSX', E'# SVGs in JSX \n - > [SVGtoJSX Electron App](https://github.com/SaraVieira/svg-to-jsx-electron/) \n ```- [SVG Basic Shapes](https://developer.mozilla.org/en-US/docs/Web/SVG/Tutorial/Basic_Shapes)```', '2020-01-13T16:28:32.615Z'),
   ('633c6f58fb814d2aba9b2ccad5972ec1', 1,'Static site generation with Hugo', E'fd', '2020-01-14T16:28:32.615Z'),
   ('24916a171f4f4abba439a797b61da561', 1,'Useful javascript array methods', E'fd', '2020-01-15T16:28:32.615Z'),
   ('ad7f282bb75e46e881f13e6ed89e1fe8', 1,'HTTP status codes cheatesheet', E'fd', '2020-01-16T16:28:32.615Z'),

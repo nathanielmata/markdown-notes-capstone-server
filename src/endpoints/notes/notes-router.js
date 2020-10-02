@@ -11,7 +11,7 @@ notesRouter
   .route("/")
   .all(requireAuth)
   .get((req, res, next) => {
-    NotesService.getAllNotes(req.app.get("db"))
+    NotesService.getAllNotes(req.app.get("db"), req.user.id)
       .then((notes) => {
         res.json(NotesService.serializeNotes(notes));
       })
@@ -69,6 +69,7 @@ notesRouter
     NotesService.updateNote(
       req.app.get("db"),
       req.params.id,
+      req.user.id,
       noteToUpdate
     )
     .then(note => {
@@ -85,7 +86,8 @@ async function checkNoteExists(req, res, next) {
   try {
     const note = await NotesService.getById(
       req.app.get('db'),
-      req.params.id
+      req.params.id,
+      req.user.id
     )
 
     if (!note)

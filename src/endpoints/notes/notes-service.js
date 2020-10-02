@@ -1,12 +1,18 @@
 const xss = require("xss");
 
 const NotesService = {
-  getAllNotes(db) {
-    return db.select("*").from("markdown_notes");
+  getAllNotes(db, user_id) {
+    return db
+      .select("*")
+      .from("markdown_notes")
+      .where({user_id});
   },
 
-  getById(db, id) {
-    return NotesService.getAllNotes(db).where("id", id).first();
+  getById(db, id, user_id) {
+    return NotesService
+    .getAllNotes(db, user_id)
+    .where({id})
+    .first();
   },
 
   insertNote(db, newNote) {
@@ -15,16 +21,16 @@ const NotesService = {
       .into("markdown_notes")
       .returning("*")
       .then(([note]) => note)
-      .then((note) => NotesService.getById(db, note.id));
+      .then((note) => NotesService.getById(db, note.id, note.user_id));
   },
 
   updateNote(db, id, newNoteFields) {
     return db("markdown_notes")
-      .where({ id })
+      .where({id})
       .update(newNoteFields)
       .returning("*")
       .then(([note]) => note)
-      .then((note) => NotesService.getById(db, note.id));
+      .then((note) => NotesService.getById(db, note.id, note.user_id));
   },
 
   serializeNotes(notes) {
