@@ -69,7 +69,6 @@ notesRouter
     NotesService.updateNote(
       req.app.get("db"),
       req.params.id,
-      req.user.id,
       noteToUpdate
     )
     .then(note => {
