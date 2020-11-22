@@ -5,7 +5,8 @@ const NotesService = {
     return db
       .select("*")
       .from("markdown_notes")
-      .where({user_id});
+      .where({user_id})
+      .orderBy('id');
   },
 
   getById(db, id, user_id) {
