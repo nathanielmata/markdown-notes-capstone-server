@@ -78,7 +78,22 @@ notesRouter
         .json(NotesService.serializeNote(note))
     })
     .catch(next)
-  });
+  })
+  .delete((req, res, next) => {
+		NotesService.deleteNote(
+      req.app.get('db'),
+      req.params.id,
+      req.user.id
+    )
+    .then((numRowsAffected) => {
+      if (numRowsAffected === 1) {
+        res.status(204).end();
+      } else {
+        res.status(401).json({ error: `You are not authorized to delete this note` });
+      }
+    })
+    .catch(next);
+	});
 
 /* async/await syntax for promises */
 async function checkNoteExists(req, res, next) {
