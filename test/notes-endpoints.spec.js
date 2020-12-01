@@ -58,7 +58,7 @@ describe(`Notes Endpoints`, function() {
       })
     })
 
-    context(`Given an XSS attack note`, () => {
+    context(`Given an XSS attack note title`, () => {
       const testUser = testUsers[0];
       const {
         maliciousNote,
@@ -101,7 +101,7 @@ describe(`Notes Endpoints`, function() {
       })
     })
 
-    context(`Given an XSS attack note`, () => {
+    context(`Given an XSS attack note title`, () => {
       const testUser = testUsers[0];
       const {
         maliciousNote,

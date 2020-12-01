@@ -120,7 +120,7 @@ function makeMaliciousNote(user) {
   const expectedNote = {
     ...makeExpectedNote([user], maliciousNote),
     title: 'Naughty naughty very naughty &lt;script&gt;alert(\"xss\");&lt;/script&gt;',
-    content: `# SVGs in JSX \n - <img src="https://example.com/nothing.txt">.`,
+    content: `# SVGs in JSX \n - <img src="https://example.com/nothing.txt" onerror="alert(document.cookie);">.`,
   }
   return {
     maliciousNote,
